@@ -1,4 +1,4 @@
-package fr.eni.bo;
+package fr.eni.vae.bll;
 
 public class Test {
 
