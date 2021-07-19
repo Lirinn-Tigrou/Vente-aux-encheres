@@ -28,15 +28,7 @@ public class PageModifierProfil extends HttpServlet implements Servlet {
 		
 		
 		this.getServletContext().getRequestDispatcher("/WEB-INF/PageModifierProfil.jsp").forward(request,response);
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	} 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
