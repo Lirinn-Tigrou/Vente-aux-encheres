@@ -48,7 +48,7 @@ public class AjouterServlet extends HttpServlet {
 		}
 		else
 		{
-			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/pageCreerCompte.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/CreerCompte.jsp");
 			rd.forward(request, response);
 		}
 
