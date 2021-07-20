@@ -41,7 +41,7 @@ public class AjouterServlet extends HttpServlet {
 				response.sendRedirect(request.getContextPath()+"/ListerServlet");	
 			} catch (Exception e) {
 				request.setAttribute("erreur", e.getMessage());
-				RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/erreur.jsp");
+				RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/erreur.jsp");
 				rd.forward(request, response);
 			}
 			

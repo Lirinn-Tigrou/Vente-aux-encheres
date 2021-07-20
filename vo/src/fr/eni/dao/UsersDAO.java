@@ -33,9 +33,9 @@ public class UsersDAO {
 		try (Connection cnx = CNX.getConnection(); PreparedStatement pstmt = cnx.prepareStatement(INSERT)) {
 			pstmt.setString(1, newUsers.getUsername());
 			pstmt.setString(2, newUsers.getPassword());
-			pstmt.setString(2, newUsers.getFullname());
-			pstmt.setString(2, newUsers.getEmail());
-            pstmt.executeUpdate();
+			pstmt.setString(3, newUsers.getFullname());
+			pstmt.setString(4, newUsers.getEmail());
+			pstmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
 			throw new Exception("Erreur à l'enregistrement.", e);

@@ -50,23 +50,7 @@ public class ObjetUsers implements Serializable {
 		this.fullname = fullname;
 		this.email = email;
 	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		ObjetUsers other = (ObjetUsers) obj;
-		if (password == null) {
-			if (other.password != null)
-				return false;
-		} else if (!password.equals(other.password))
-			return false;
-		return true;
-	}
+	
 
 	@Override
 	public String toString() {
@@ -75,3 +59,4 @@ public class ObjetUsers implements Serializable {
 	}
 
 }
+
