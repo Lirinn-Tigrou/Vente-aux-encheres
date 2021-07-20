@@ -35,7 +35,7 @@ public class UsersDAO {
 			pstmt.setString(2, newUsers.getPassword());
 			pstmt.setString(2, newUsers.getFullname());
 			pstmt.setString(2, newUsers.getEmail());
-
+            pstmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
 			throw new Exception("Erreur à l'enregistrement.", e);

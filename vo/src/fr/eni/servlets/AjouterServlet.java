@@ -15,7 +15,7 @@ import fr.eni.services.UsersService;
 /**
  * Servlet implementation class AjouterServlet
  */
-@WebServlet("/AjouterServlet")
+@WebServlet("/CreerCompte")
 public class AjouterServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
