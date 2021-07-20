@@ -24,7 +24,7 @@ public class AjouterServlet extends HttpServlet {
 	 *      response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/pageCreerCompte.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/CreerCompte.jsp");
 		rd.forward(request, response);
 	}
 
@@ -48,7 +48,7 @@ public class AjouterServlet extends HttpServlet {
 		}
 		else
 		{
-			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/CreerCompte.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/CreerCompte.jsp");
 			rd.forward(request, response);
 		}
 
