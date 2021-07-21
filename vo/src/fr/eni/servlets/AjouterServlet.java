@@ -20,7 +20,7 @@ public class AjouterServlet extends HttpServlet {
 	 *      response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/CreerCompte.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/CreerCompte.jsp");
 		rd.forward(request, response);
 	}
 
@@ -37,14 +37,14 @@ public class AjouterServlet extends HttpServlet {
 				response.sendRedirect(request.getContextPath()+"/ListerServlet");	
 			} catch (Exception e) {
 				request.setAttribute("erreur", e.getMessage());
-				RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/erreur.jsp");
+				RequestDispatcher rd = request.getRequestDispatcher("/erreur.jsp");
 				rd.forward(request, response);
 			}
 			
 		}
 		else
 		{
-			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/ListerServlet.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("/ListerServlet.jsp");
 			rd.forward(request, response);
 		}
 

@@ -59,7 +59,7 @@ public class UsersDAO {
 			pstmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
-			throw new Exception("Erreur à la mise à jour de la voiture.", e);
+			throw new Exception("Erreur à la mise à jour.", e);
 		}
 
 	}

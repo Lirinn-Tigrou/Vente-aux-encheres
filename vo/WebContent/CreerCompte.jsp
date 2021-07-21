@@ -50,40 +50,33 @@
    <tr>
     <td><label  for="username">Pseudo : <span class="requis">*</span></label></td>
     <td><input type="text" id="username" name="username" value="" size="20" maxlength="60" /></td>
-    <td><label  for="">Nom :  <span class="requis">*</span></label></td>
-    <td><input type="text" id="" name="" value="" size="20" maxlength="60" /></td>
+    <td><label  for="fullname">Nom :  <span class="requis">*</span></label></td>
+    <td><input type="text" id="fullname" name="fullname" value="" size="20" maxlength="60" /></td>
   </tr>
-     <tr>
+  <tr>
     <td><label for="prenom">Prénom : <span class="requis">*</span></label></td>
     <td><input type="text" id="prenom" name="prenom" value="" size="20" maxlength="60" /></td>
     <td><label for="email">Email :<span class="requis">*</span></label></td>
     <td><input type="text" id="email" name="email" value="" size="20" maxlength="60" /></td>
   </tr>
-     <tr>
-    <td><label  for="Pseudo">Telephone : </label></td>
-    <td><input type="text" id="email" name="email" value="" size="20" maxlength="60" /></td>
+  <tr>
+    <td><label  for="telephone">Telephone : </label></td>
+    <td><input type="text" id="telephone" name="telephone" value="" size="20" maxlength="60" /></td>
     <td><label  for="rue">rue :  </label></td>
     <td><input type="text"  id="rue"  name="rue"size="20" maxlength="60" /></td>
   </tr>
-
-     <tr>
+  <tr>
     <td><label  for="cp">Code postale :</label></td>
     <td><input type="text" id="cp" name="cp" value="" size="20" maxlength="60" /></td>
     <td><label  for="Ville">Ville : </label></td>
     <td><input type="text" id="ville" name="ville" value="" size="20" maxlength="60" /></td>
   </tr>
-
      <tr>
-    <td><label  for="password">mot de passe : </label>*</td>
+    <td><label  for="password">mot de passe : </label></td>
     <td><input type="text" id="password" name="password" value="" size="20" maxlength="60" /></td>
-    <td><label  for="conf">confirmation: </label>*</td>
+    <td><label  for="conf">confirmation: </label></td>
     <td><input type="text" id="conf" name="conf" value="" size="20" maxlength="60" /></td>
   </tr>
-  <tr>
- 
-
-  
-   </tr>
 
 <div class="table-responsive-xxl">
   <table class="table">
