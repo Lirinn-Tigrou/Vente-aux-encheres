@@ -16,8 +16,8 @@ public class UsersDAO {
 	private static String INSERT = "insert into users(username, password, fullname, email) values(?,?,?,?)";
 	private static String SELECT_ALL = "select username, password, fullname, email from users";
 	private static String DELETE = "delete from users where username=?";
-	private static String UPDATE="update users set password=?, fullname=?, email=? where username=?";
-	
+	private static String UPDATE = "update users set password=?, fullname=?, email=? where username=?";
+
 	public ObjetUsers getUser(String username) throws Exception {
 		ObjetUsers users = null;
 		try (Connection cnx = CNX.getConnection(); PreparedStatement pstmt = cnx.prepareStatement(SELECT_ONE)) {
@@ -48,6 +48,20 @@ public class UsersDAO {
 			e.printStackTrace();
 			throw new Exception("Erreur à l'enregistrement.", e);
 		}
+	}
+
+	public void modifierUser(ObjetUsers userAModifiee) throws Exception {
+		try (Connection cnx = CNX.getConnection(); PreparedStatement pstmt = cnx.prepareStatement(UPDATE)) {
+			pstmt.setString(1, userAModifiee.getUsername());
+			pstmt.setString(2, userAModifiee.getPassword());
+			pstmt.setString(3, userAModifiee.getFullname());
+			pstmt.setString(4, userAModifiee.getEmail());
+			pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+			throw new Exception("Erreur à la mise à jour de la voiture.", e);
+		}
+
 	}
 
 	public List<ObjetUsers> getListeUser() throws Exception {
@@ -85,40 +99,4 @@ public class UsersDAO {
 		}
 
 	}
-
-	public void modifierUser(ObjetUsers userAModifiee) throws Exception {
-		
-		
-	}
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
