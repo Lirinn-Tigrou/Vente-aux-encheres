@@ -1,7 +1,6 @@
 package fr.eni.servlets;
 
 import java.io.IOException;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,10 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import fr.eni.beans.ObjetUsers;
 import fr.eni.services.UsersService;
-
-/**
- * Servlet implementation class AjouterServlet
- */
+//CONTROLEUR
 @WebServlet("/CreerCompte")
 public class AjouterServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -48,7 +44,7 @@ public class AjouterServlet extends HttpServlet {
 		}
 		else
 		{
-			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/CreerCompte.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/ListerServlet.jsp");
 			rd.forward(request, response);
 		}
 

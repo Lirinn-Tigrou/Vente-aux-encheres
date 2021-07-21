@@ -2,6 +2,8 @@ package fr.eni.beans;
 
 import java.io.Serializable;
 
+//BO
+
 public class ObjetUsers implements Serializable {
 	private static final long serialVersionUID = -5338839719032129105L;
 
@@ -42,7 +44,6 @@ public class ObjetUsers implements Serializable {
 		this.email = email;
 	}
 
-
 	public ObjetUsers(String username, String password, String fullname, String email) {
 		super();
 		this.username = username;
@@ -50,7 +51,27 @@ public class ObjetUsers implements Serializable {
 		this.fullname = fullname;
 		this.email = email;
 	}
-	
+
+	public ObjetUsers() {
+
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		ObjetUsers other = (ObjetUsers) obj;
+		if (username == null) {
+			if (other.username != null)
+				return false;
+		} else if (!username.equals(other.username))
+			return false;
+		return true;
+	}
 
 	@Override
 	public String toString() {
@@ -59,4 +80,3 @@ public class ObjetUsers implements Serializable {
 	}
 
 }
-

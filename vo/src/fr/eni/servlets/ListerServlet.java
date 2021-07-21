@@ -1,7 +1,6 @@
 package fr.eni.servlets;
 
 import java.io.IOException;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import fr.eni.services.UsersService;
-
+//CONTROLEUR
 /**
  * Servlet implementation class ListerServlet
  */
@@ -49,8 +48,8 @@ public class ListerServlet extends HttpServlet {
 		UsersService userservices = new UsersService();
 
 		try {
-			request.setAttribute("username", userservices.getUsername());
-			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/tst.jsp");
+			request.setAttribute("users", userservices.getListeUser());
+			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/ListerServlet.jsp");
 			rd.forward(request, response);
 		} catch (Exception e) {
 

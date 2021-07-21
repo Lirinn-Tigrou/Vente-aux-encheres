@@ -2,11 +2,10 @@ package fr.eni.servlets;
 
 import java.io.IOException;
 import java.util.HashMap;
-
 import javax.servlet.http.HttpServletRequest;
 
 import fr.eni.beans.ObjetUsers;
-
+//MANAGER
 public abstract class Validation {
 
 	public static ObjetUsers validerSaisie(HttpServletRequest request) throws IOException {

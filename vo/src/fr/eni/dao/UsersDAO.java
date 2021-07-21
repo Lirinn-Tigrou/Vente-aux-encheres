@@ -4,19 +4,27 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import fr.eni.beans.ObjetUsers;
 
+//DAL DAO
 public class UsersDAO {
 
-	private static String SELECT_ONE = "select username, password, fullname, email from users";
+	private static String SELECT_ONE = "select username, password, fullname, email from users where username=?";
 	private static String INSERT = "insert into users(username, password, fullname, email) values(?,?,?,?)";
-
-	public ObjetUsers getUsername() throws Exception {
-		ObjetUsers users = new ObjetUsers(null, null, null, null);
+	private static String SELECT_ALL = "select username, password, fullname, email from users";
+	private static String DELETE = "delete from users where username=?";
+	private static String UPDATE="update users set password=?, fullname=?, email=? where username=?";
+	
+	public ObjetUsers getUser(String username) throws Exception {
+		ObjetUsers users = null;
 		try (Connection cnx = CNX.getConnection(); PreparedStatement pstmt = cnx.prepareStatement(SELECT_ONE)) {
+			pstmt.setString(1, username);
 			ResultSet rs = pstmt.executeQuery();
-			while (rs.next()) {
+			if (rs.next()) {
+				users = new ObjetUsers();
 				users.setUsername(rs.getString("username"));
 				users.setPassword(rs.getString("password"));
 				users.setFullname(rs.getString("fullname"));
@@ -42,4 +50,75 @@ public class UsersDAO {
 		}
 	}
 
+	public List<ObjetUsers> getListeUser() throws Exception {
+		List<ObjetUsers> users2 = new ArrayList<>();
+		try (Connection cnx = CNX.getConnection(); PreparedStatement pstmt = cnx.prepareStatement(SELECT_ALL)) {
+			ResultSet rs = pstmt.executeQuery();
+
+			while (rs.next()) {
+				ObjetUsers users = new ObjetUsers();
+				users = new ObjetUsers();
+				users.setUsername(rs.getString("username"));
+				users.setPassword(rs.getString("password"));
+				users.setFullname(rs.getString("fullname"));
+				users.setEmail(rs.getString("email"));
+				users2.add(users);
+
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+			throw new Exception("Erreur à la lecture.", e);
+		}
+
+		return users2;
+	}
+
+	public void supprimerUser(String username) throws Exception {
+		try (Connection cnx = CNX.getConnection(); PreparedStatement pstmt = cnx.prepareStatement(DELETE)) {
+			pstmt.setString(1, username);
+			pstmt.executeUpdate();
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+			throw new Exception("Erreur de suppression.", e);
+		}
+
+	}
+
+	public void modifierUser(ObjetUsers userAModifiee) throws Exception {
+		
+		
+	}
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
