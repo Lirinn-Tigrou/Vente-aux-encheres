@@ -49,7 +49,7 @@ public class ListerServlet extends HttpServlet {
 
 		try {
 			request.setAttribute("users", userservices.getListeUser());
-			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/ListerServlet.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("/ListerServlet.jsp");
 			rd.forward(request, response);
 		} catch (Exception e) {
 
