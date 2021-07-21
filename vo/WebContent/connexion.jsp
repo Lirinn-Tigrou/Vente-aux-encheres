@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <!doctype html>
 <html lang="fr">
@@ -35,11 +35,11 @@
 <main class="form-signin">
   <form>
     <img class="mb-4" src="img/logo.jpg" alt="" width="120" height="120">
-    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+    <h1 class="h3 mb-3 fw-normal">inscrivez vous svp</h1>
 
     <div class="form-floating">
       <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-      <label for="floatingInput">Email address</label>
+      <label for="floatingInput">username</label>
     </div>
     <div class="form-floating">
       <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
@@ -57,6 +57,5 @@
 </main>
 
 
-    
   </body>
 </html>

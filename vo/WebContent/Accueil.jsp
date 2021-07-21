@@ -20,6 +20,9 @@
         -moz-user-select: none;
         user-select: none;
       }
+      main{
+      margin: auto;
+      }
       
       body {
   background-image: linear-gradient(180deg, #eee, #fff 100px, #fff);
@@ -66,8 +69,8 @@
      
       <div class="col-md-3 text-end">
        
-        <button type="button" class="btn btn-primary">Inscription</button>
-         <button type="button" class="btn btn-success">Connexion</button>
+        <a href="CreerCompte.jsp" class="btn btn-primary" role="button">Inscription</a>
+		<a href="connexion.jsp" class="btn btn-success" role="button">Connexion</a>
       </div>
     </header>
   </div>
@@ -80,9 +83,10 @@
       <input class="form-control me-2" type="search" placeholder="recherche" aria-label="Search">
       <select class="form-select form-select-sm" aria-label=".form-select-sm example">
   <option selected>Toutes</option>
-  <option value="1">informatique</option>
-  <option value="2">jardinage</option>
-  <option value="3">armes</option>
+  <option value="1">Informatique</option>
+  <option value="2">Ameublement</option>
+  <option value="3">Vetements</option>
+  <option value="4">Sport & Loisirs</option>
 </select>
       
       <button class="btn btn-outline-success" type="submit">rechercher</button>
@@ -90,50 +94,53 @@
   </div>
     </div>
  
-  <main>
+  <main >
     <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
-      <div class="col">
-        <div class="card mb-4 rounded-3 shadow-sm">
-          <div class="card-header py-3">
-            <h4 class="my-0 fw-normal">PC gamer </h4>
+     <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm border-primary">
+          <div class="card-header py-3 text-white bg-primary border-primary">
+            <h4 class="my-0 fw-normal">	PC gamer </h4>
           </div>
           <div class="card-body">
-            <h1 class="card-title pricing-card-title">250$<small class="text-muted fw-light"></small></h1>
+            <h1 class="card-title pricing-card-title">290$<small class="text-muted fw-light"></small></h1>
             <ul class="list-unstyled mt-3 mb-4">
-              
-              <img src="/img/shopping.jpg" width="90" height="90">
-              <li>fin de l'enchère dans 30 jours</li>
-              <li>vendeur : mister DELETE </li>
-              
-            </ul>
-            <button type="button" class="w-100 btn btn-lg btn-outline-primary">Démarrer l'enchère</button>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card mb-4 rounded-3 shadow-sm">
-          <div class="card-header py-3">
-            <h4 class="my-0 fw-normal">Smartphone</h4>
-          </div>
-          <div class="card-body">
-            <h1 class="card-title pricing-card-title">100$<small class="text-muted fw-light"></small></h1>
-            <ul class="list-unstyled mt-3 mb-4">
-             <img src="/img/shopping.jpg" width="90" height="90">
+            
+            
+            <img src="img/shopping.png" width="90" height="90">
               <li>fin de l'enchère dans 30 jours</li>
               <li>vendeur : mister DELETE </li>
              
             </ul>
-            <button type="button" class="w-100 btn btn-lg btn-primary">Démarrer l'enchère</button>
+            <button type="button" class="w-100 btn btn-lg btn-outline-primary">acces  premium</button>
+          </div>
+        </div>
+      </div>
+   <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm border-primary">
+          <div class="card-header py-3 text-white bg-primary border-primary">
+            <h4 class="my-0 fw-normal">	Vetement</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">29$<small class="text-muted fw-light"></small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+            
+            
+            <img src="img/delete.png" width="90" height="90">
+              <li>fin de l'enchère dans 30 jours</li>
+              <li>vendeur : mister DELETE </li>
+             
+            </ul>
+             <button type="button" class="w-100 btn btn-lg btn-outline-primary">acces  premium</button>
           </div>
         </div>
       </div>
       <div class="col">
         <div class="card mb-4 rounded-3 shadow-sm border-primary">
           <div class="card-header py-3 text-white bg-primary border-primary">
-            <h4 class="my-0 fw-normal">	Tondeuse à gazon </h4>
+            <h4 class="my-0 fw-normal">	Smartphone </h4>
           </div>
           <div class="card-body">
-            <h1 class="card-title pricing-card-title">29$<small class="text-muted fw-light"></small></h1>
+            <h1 class="card-title pricing-card-title">180$<small class="text-muted fw-light"></small></h1>
             <ul class="list-unstyled mt-3 mb-4">
             
             
@@ -142,7 +149,7 @@
               <li>vendeur : mister DELETE </li>
              
             </ul>
-            <button type="button" class="w-100 btn btn-lg btn-primary">Démarrer l'enchère</button>
+           <button type="button" class="w-100 btn btn-lg btn-outline-primary">acces  premium</button>
           </div>
         </div>
       </div>
