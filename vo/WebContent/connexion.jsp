@@ -69,7 +69,7 @@
                     <input id="connection-remember" type="checkbox" name="connection-remeber" value="connection-remeber"></label>
             </p>
             <p></p>
-            <p><a id="recupMdp" href="<%=request.getContextPath()%>/RecuperationMdp" onclick="envoiRecupMdp(event)">Mot de passe oublié</a></p>
+            <p><a id="recupMdp" href="/RecuperationMdp" onclick="envoiRecupMdp(event)">Mot de passe oublié</a></p>
             <p></p>
             
 			<button class="w-100 btn btn-lg btn-primary" type="submit">Connexion</button>
