@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import fr.eni.services.UsersService;
+
 //CONTROLEUR
 /**
  * Servlet implementation class ListerServlet
@@ -23,32 +24,36 @@ public class ListerServlet extends HttpServlet {
 	public ListerServlet() {
 		super();
 	}
-	
+
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		processRequest(request,response);
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		processRequest(request, response);
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		processRequest(request,response);
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		processRequest(request, response);
 	}
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */
-	protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+	protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 
 		UsersService userservices = new UsersService();
 
 		try {
-			request.setAttribute("users", userservices.getListeUser());
+			request.setAttribute("username", userservices.getListeUser());
 			RequestDispatcher rd = request.getRequestDispatcher("/ListerServlet.jsp");
 			rd.forward(request, response);
 		} catch (Exception e) {
