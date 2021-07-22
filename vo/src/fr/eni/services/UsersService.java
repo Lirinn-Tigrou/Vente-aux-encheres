@@ -9,7 +9,7 @@ public class UsersService {
 
 	UsersDAO userDAO = new UsersDAO();
 
-	public Object getUser(String username) throws Exception {
+	public ObjetUsers getUser(String username) throws Exception {
 		return this.userDAO.getUser(username);
 	}
 
@@ -17,8 +17,7 @@ public class UsersService {
 		this.userDAO.ajouterUser(newUser);
 	}
 	
-	public List<ObjetUsers> getListeUser() throws Exception
-	{
+	public List<ObjetUsers> getListeUser() throws Exception {
 		return this.userDAO.getListeUser();
 	}
 
@@ -28,6 +27,15 @@ public class UsersService {
 
 	public void modifierUser(ObjetUsers userAModifiee) throws Exception {
 		this.userDAO.modifierUser(userAModifiee);
+	}
+
+	public void setEmail(String email) {
+		
+	}
+
+	public void setMotDePasse(String motDePasse) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
