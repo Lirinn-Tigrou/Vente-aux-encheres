@@ -84,8 +84,6 @@
 <center><button type="submit"  class="btn btn-primary btn-lg">Créer</button>
 
  
-  <a href="${pageContext.request.contextPath}/connexion.jsp" class="btn btn-success btn-lg">Back</a>       
- 
   </table>
 </div>
 </form>
