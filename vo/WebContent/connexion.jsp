@@ -64,11 +64,14 @@
 					placeholder="Mot de passe"> <label for="floatingPassword">Mot de passe</label>
 			</div>
 
-			<div class="checkbox mb-3">
-				<label> <input type="checkbox" value="remember-me">
-					Se souvenir de moi
-				</label>
-			</div>
+            <p>
+                <label for="connection-remember">Se souvenir de moi:
+                    <input id="connection-remember" type="checkbox" name="connection-remeber" value="connection-remeber"></label>
+            </p>
+            <p></p>
+            <p><a id="recupMdp" href="<%=request.getContextPath()%>/RecuperationMdp" onclick="envoiRecupMdp(event)">Mot de passe oublié</a></p>
+            <p></p>
+            
 			<button class="w-100 btn btn-lg btn-primary" type="submit">Connexion</button>
 			
 			<p class="mt-5 mb-3 text-muted">&copy; 2021</p>
