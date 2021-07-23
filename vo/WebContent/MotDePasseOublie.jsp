@@ -31,19 +31,16 @@
   </div>
 
   <div class="inscription-container">
-        <h3 style="text-align: center">Veuillez remplir les champs suivant pour réinitialiser votre mot de passe : :</h3>
+        <h3 style="text-align: center">Veuillez remplir les champs suivant pour réinitialiser votre mot de passe :</h3>
 
         <form action="RecuperationMdp" method="post">
             <div class="div-form">
 <BR/>
-                <p><label for="email">Adresse mail :</label>
-                <input type="email" id="email" name="email" required="required" maxlength="30"/></p>
-                <div/>
-                <div class="div-form">
+    <td><label  for="email">Adresse Email : <span class="requis">*</span></label></td>
+    <td><input type="email" id="email" name="email" value="" size="20" maxlength="60" /></td>
 <BR/>
-                <p><label for="telephone">Téléphone :</label>
-                    <input type="telephone" id="telephone" name="telephone" required="required" maxlength="30"/></p>
-                    <input type="hidden" id="cle" name="cle" value="${cle}"/></p>
+    <td><label  for="telephone">Numero de téléphone : <span class="requis">*</span></label></td>
+    <td><input type="telephone" id="telephone" name="telephone" value="" size="20" maxlength="60" /></td>
                 </div>
             </div>
 

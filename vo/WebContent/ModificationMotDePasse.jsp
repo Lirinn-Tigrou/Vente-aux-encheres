@@ -38,14 +38,13 @@
         <form action="RecuperationMdp" method="post">
             <div class="div-form">
 <BR/>
-                <p><label for="motDePasse">Mot de passe :</label>
-                <input type="password" id="motDePasse" name="motDePasse" required="required" maxlength="30"/></p>
-                <div/>
-                <div class="div-form">
+     <tr>
+    <td><label  for="password">Mot de passe : <span class="requis">*</span></label></td>
+    <td><input type="text" id="password" name="password" value="" size="20" maxlength="60" /></td>
 <BR/>
-                <p><label for="mdpConfirm">Confirmation Mot de passe :</label>
-                    <input type="password" id="mdpConfirm" name="mdpConfirm" required="required" maxlength="30"/></p>
-                    <input type="hidden" id="cle" name="cle" value="${cle}"/></p>
+    <td><label  for="conf">Confirmation: <span class="requis">*</span></label></td>
+    <td><input type="text" id="conf" name="conf" value="" size="20" maxlength="60" /></td>
+  </tr>
                 </div>
             </div>
 

@@ -144,7 +144,7 @@
             <ul class="list-unstyled mt-3 mb-4">
             
             
-            <img src="/img/shopping.jpg" width="90" height="90">
+            <img src="/img/nokia.jpg" width="90" height="90">
               <li>fin de l'enchère dans 30 jours</li>
               <li>vendeur : mister DELETE </li>
              
